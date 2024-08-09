@@ -3,7 +3,7 @@ usuarios = {}
 
 def crear_usuario():
     nombre = input("Ingrese el nombre del usuario: ")
-    # Validar contraseña
+
     while True:
         contrasena = input(f"Ingrese la contraseña para {nombre}: ")
         if len(contrasena) >= 6 and any(c.isupper() for c in contrasena) \
@@ -21,10 +21,9 @@ def validar_usuario():
         print("Acceso concedido. ¡Bienvenido!")
     else:
         print("Usuario no válido o contraseña incorrecta.")
-
-# Crear 3 usuarios
+        
 for i in range(3):
     crear_usuario()
 
-# Validar usuario
+
 validar_usuario()
